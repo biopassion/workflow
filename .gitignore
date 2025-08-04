@@ -113,5 +113,7 @@ target/
 **plot/
 **reports/
 **ignore/
-**xlsx
-**output**/
+**.xlsx
+**.docx
+output/*.md
+output/*.html

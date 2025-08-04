@@ -29,7 +29,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 
-main_dir= "./"
+main_dir= "../"
 
 
 # Form title

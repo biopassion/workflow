@@ -28,9 +28,11 @@ from md2docx_python.src.md2docx_python import markdown_to_word
 import streamlit as st
 import streamlit.components.v1 as components
 
-
-main_dir= "../"
-
+# the current dir is where the main app.py is 
+main_dir= "./"
+# output dir
+output_dir=os.path.join(main_dir,"output")
+print(output_dir)
 
 # Form title
 st.title("🔎 Automated Literature Search and Insights Generation")
@@ -92,8 +94,7 @@ with st.form("my_form",clear_on_submit=False):
         # tag 
         tag_string = "pubmed_"+ prepare_tag(key_word_no_space)
         
-        # output dir
-        output_keyword_dir=os.path.join(main_dir,"output")
+
         
         #------------------------------------------#
         # 0. Search literature
@@ -108,7 +109,7 @@ with st.form("my_form",clear_on_submit=False):
             # csv name
             csv_name = f"{tag_string}.csv"
             # save a copy 
-            csv_path = os.path.join(output_keyword_dir, csv_name)
+            csv_path = os.path.join(output_dir, csv_name)
             df_articles.to_csv(csv_path,index=False)
             
             # show df 
@@ -150,7 +151,7 @@ with st.form("my_form",clear_on_submit=False):
                 #st.write(f"Progress: {progress:.1f}% completed\n")
                 
                 # save csv
-                csv_path = os.path.join(output_keyword_dir, csv_name)
+                csv_path = os.path.join(output_dir, csv_name)
                 df_articles.to_csv(csv_path,index=False)
                 
             
@@ -181,7 +182,7 @@ with st.form("my_form",clear_on_submit=False):
                 
             # Save and show the network
             html_name =f"{tag_string}_network.html" 
-            html_path = os.path.join(output_keyword_dir, html_name) 
+            html_path = os.path.join(output_dir, html_name) 
             network_write_to_html(input_graph=Graph,html_path=html_path)
             
             # node names (use for network summary)
@@ -224,13 +225,13 @@ with st.form("my_form",clear_on_submit=False):
                                         network_summary="yes")
                 # save markdown
                 md_name= f"{tag_string}_network.md" 
-                md_path= os.path.join(output_keyword_dir, md_name)
+                md_path= os.path.join(output_dir, md_name)
                 with open(md_path, 'w') as f:
                     f.write(response)
                 
                 # convert md to word
                 word_name = f"{tag_string}_network.docx" 
-                word_path = os.path.join(output_keyword_dir, word_name)
+                word_path = os.path.join(output_dir, word_name)
                 markdown_to_word(md_path, word_path)
                     
                 with st.expander("Summary of Network Components"):

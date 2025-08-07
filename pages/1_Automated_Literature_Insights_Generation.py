@@ -35,7 +35,7 @@ output_dir=os.path.join(main_dir,"output")
 print(output_dir)
 
 # Form title
-st.title("🔎 Automated Literature Search and Insights Generation")
+st.title("🔎 Automated Literature Search and Insight Generation")
 
 # Form 
 with st.form("my_form",clear_on_submit=False):

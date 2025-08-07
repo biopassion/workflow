@@ -1,17 +1,10 @@
-# protocol ep3 
-
 import sys
 sys.path.append('../')
-
-# functions
-## download
-from functions.get_binary_file_downloader import *
-from md2docx_python.src.md2docx_python import markdown_to_word
 
 ## streamlit 
 import streamlit as st
 import streamlit.components.v1 as components
-
+import os 
 # the current dir is where the main app.py is 
 main_dir= "./"
 # output dir
@@ -33,4 +26,3 @@ with st.expander("Flux Balance Analysis"):
     HtmlFile = open(flux_html_path, 'r', encoding='utf-8')
     source_code = HtmlFile.read() 
     components.html(source_code,height=800, scrolling=True)
-                

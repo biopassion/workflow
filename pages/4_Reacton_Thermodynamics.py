@@ -6,7 +6,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 import os 
-from functions.prepare_metabolite_from_input import *
+from functions.prepare_input import *
 from equilibrator_api import ComponentContribution, Q_
 
 

@@ -7,7 +7,6 @@ import streamlit.components.v1 as components
 
 import os 
 from rdkit import Chem
-from rdkit.Chem.Draw import IPythonConsole
 from rdkit.Chem import Draw
 from rdkit.Chem import rdFingerprintGenerator
 from rdkit import DataStructs

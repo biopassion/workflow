@@ -1,14 +1,13 @@
 import sys
 sys.path.append('../')
 
-import os 
-from equilibrator_api import ComponentContribution, Q_
-
-
-from functions.prepare_metabolite_from_input import prepare_metabolite_from_input
 ## streamlit 
 import streamlit as st
 import streamlit.components.v1 as components
+
+import os 
+from equilibrator_api import ComponentContribution, Q_
+from functions.prepare_metabolite_from_input import prepare_metabolite_from_input
 
 
 # the current dir is where the main app.py is 

@@ -2,12 +2,7 @@ import sys
 sys.path.append('../')
 
 import os 
-import numpy
-import cvxpy
-import scipy.stats
-import matplotlib.pyplot as plt
 from equilibrator_api import ComponentContribution, Q_
-from numpyarray_to_latex.jupyter import to_jup
 
 
 from functions.prepare_metabolite_from_input import prepare_metabolite_from_input

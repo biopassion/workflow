@@ -30,3 +30,4 @@ scipy
 cvxpy # convex optimization
 equilibrator-api
 numpyarray-to-latex
+rdkit-pypi

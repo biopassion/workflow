@@ -6,8 +6,9 @@ import streamlit as st
 import streamlit.components.v1 as components
 
 import os 
-from equilibrator_api import ComponentContribution, Q_
 from functions.prepare_metabolite_from_input import prepare_metabolite_from_input
+from equilibrator_api import ComponentContribution, Q_
+
 
 
 # the current dir is where the main app.py is 

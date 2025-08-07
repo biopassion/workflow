@@ -1,3 +1,5 @@
+# pip3 install --upgrade pip
+
 streamlit==1.47.0
 streamlit-feedback==0.1.4
 langchain==0.3.26
@@ -20,4 +22,11 @@ trubrics>=1.4.3
 duckduckgo_search==8.1.1
 openai==1.97.0
 cobra==0.29.1
-#cplex==22.1.2.0
+#cplex==22.1.2.0 
+# cplex causing installation issue in streamlit app
+
+numpy
+scipy
+cvxpy # convex optimization
+equilibrator-api
+numpyarray-to-latex

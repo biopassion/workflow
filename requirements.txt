@@ -20,4 +20,4 @@ trubrics>=1.4.3
 duckduckgo_search==8.1.1
 openai==1.97.0
 cobra==0.29.1
-cplex
+cplex==22.1.2.0

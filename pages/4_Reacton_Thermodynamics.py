@@ -93,14 +93,14 @@ if meta1 and meta2 and meta3 and st.button("Submit"):
     cc.temperature = Q_(f"{temperature_k}K")
     
     # Parsing reaction with non-trivial stoichiometric coefficients is simple. Just add the coefficients before each compound ID (if none is given, it is assumed to be 1)
-    input_meta1=prepare_metabolite_from_input(meta1)
-    input_meta2=prepare_metabolite_from_input(meta2)
-    input_meta3=prepare_metabolite_from_input(meta3)
+    input_meta1=prepare_input(meta1)
+    input_meta2=prepare_input(meta2)
+    input_meta3=prepare_input(meta3)
 
 
     # reaction by name 
     if meta4 and num4:
-        input_meta4=prepare_metabolite_from_input(meta4)
+        input_meta4=prepare_input(meta4)
         atpase_reaction_name = f"{num1} {meta1} + {num2} {meta2} = {num3} {meta3} + {num4} {meta4}"
         atpase_reaction = cc.parse_reaction_formula(
             f"{num1} {input_meta1} + {num2} {input_meta2}={num3} {input_meta3} + {num4} {input_meta4}"
